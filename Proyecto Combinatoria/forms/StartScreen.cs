@@ -31,5 +31,10 @@ namespace Proyecto_Combinatoria
         {
 
         }
+
+        private void Start_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
