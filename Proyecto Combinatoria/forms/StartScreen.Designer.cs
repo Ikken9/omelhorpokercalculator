@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Combinatoria
 {
-    partial class Form1
+    partial class StartScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartScreen));
             this.backgroundImage = new System.Windows.Forms.PictureBox();
             this.Start = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).BeginInit();
@@ -52,7 +52,7 @@
             this.Start.FlatAppearance.BorderColor = System.Drawing.Color.AliceBlue;
             this.Start.Font = new System.Drawing.Font("Cascadia Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Start.ForeColor = System.Drawing.Color.White;
-            this.Start.Location = new System.Drawing.Point(360, 466);
+            this.Start.Location = new System.Drawing.Point(352, 466);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(155, 49);
             this.Start.TabIndex = 4;
@@ -60,7 +60,7 @@
             this.Start.UseVisualStyleBackColor = false;
             this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
-            // Form1
+            // StartScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -69,7 +69,7 @@
             this.Controls.Add(this.Start);
             this.Controls.Add(this.backgroundImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
+            this.Name = "StartScreen";
             this.Text = "Background";
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).EndInit();
             this.ResumeLayout(false);
