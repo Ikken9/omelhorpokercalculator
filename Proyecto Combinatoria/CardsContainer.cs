@@ -11,7 +11,7 @@ namespace Proyecto_Combinatoria
         //Esta lista contiene las 52 cartas en un principio, cuando el jugador seleccione 2 cartas, se quitan de la lista,
         //quedando disponibles otras 50 cartas.
         List<String> Cards = new List<String>();
-        
+
 
         //Metodo para llenar la lista con las 52 cartas.
         public void generateCards()
