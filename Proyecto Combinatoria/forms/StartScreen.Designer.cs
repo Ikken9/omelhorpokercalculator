@@ -70,7 +70,7 @@
             this.Controls.Add(this.backgroundImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "StartScreen";
-            this.Text = "Background";
+            this.Text = "Start menu";
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).EndInit();
             this.ResumeLayout(false);
 
