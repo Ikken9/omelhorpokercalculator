@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Combinatoria
 {
-    partial class Form1
+    partial class StartScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.chooseCard = new System.Windows.Forms.ComboBox();
-            this.chooseSuit = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartScreen));
             this.backgroundImage = new System.Windows.Forms.PictureBox();
+            this.Start = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // chooseCard
-            // 
-            this.chooseCard.FormattingEnabled = true;
-            this.chooseCard.Location = new System.Drawing.Point(112, 498);
-            this.chooseCard.Name = "chooseCard";
-            this.chooseCard.Size = new System.Drawing.Size(121, 21);
-            this.chooseCard.TabIndex = 1;
-            // 
-            // chooseSuit
-            // 
-            this.chooseSuit.FormattingEnabled = true;
-            this.chooseSuit.Location = new System.Drawing.Point(614, 498);
-            this.chooseSuit.Name = "chooseSuit";
-            this.chooseSuit.Size = new System.Drawing.Size(121, 21);
-            this.chooseSuit.TabIndex = 2;
-            this.chooseSuit.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // backgroundImage
             // 
@@ -63,27 +45,40 @@
             this.backgroundImage.TabStop = false;
             this.backgroundImage.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Form1
+            // Start
+            // 
+            this.Start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(7)))), ((int)(((byte)(18)))));
+            this.Start.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Start.FlatAppearance.BorderColor = System.Drawing.Color.AliceBlue;
+            this.Start.Font = new System.Drawing.Font("Cascadia Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Start.ForeColor = System.Drawing.Color.White;
+            this.Start.Location = new System.Drawing.Point(352, 466);
+            this.Start.Name = "Start";
+            this.Start.Size = new System.Drawing.Size(155, 49);
+            this.Start.TabIndex = 4;
+            this.Start.Text = "Start";
+            this.Start.UseVisualStyleBackColor = false;
+            this.Start.Click += new System.EventHandler(this.Start_Click);
+            // 
+            // StartScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(7)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(850, 600);
+            this.Controls.Add(this.Start);
             this.Controls.Add(this.backgroundImage);
-            this.Controls.Add(this.chooseSuit);
-            this.Controls.Add(this.chooseCard);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
-            this.Text = "Background";
+            this.Name = "StartScreen";
+            this.Text = "Start menu";
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox chooseCard;
-        private System.Windows.Forms.ComboBox chooseSuit;
         private System.Windows.Forms.PictureBox backgroundImage;
+        private System.Windows.Forms.Button Start;
     }
 }
 

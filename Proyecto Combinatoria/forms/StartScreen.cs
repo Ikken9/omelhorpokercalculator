@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Combinatoria
 {
-    public partial class Form1 : Form
+    public partial class StartScreen : Form
     {
-        public Form1()
+        public StartScreen()
         {
             InitializeComponent();
         }
@@ -30,6 +30,11 @@ namespace Proyecto_Combinatoria
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Start_Click(object sender, EventArgs e)
+        {
+            new CardSelector().Show();
         }
     }
 }

@@ -46,18 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CardsContainer.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="forms\CardSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="forms\CardSelector.Designer.cs">
+      <DependentUpon>CardSelector.cs</DependentUpon>
     </Compile>
-    <Compile Include="probabilityCalculator.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="src\CardsManager.cs" />
+    <Compile Include="forms\StartScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\StartScreen.Designer.cs">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Card.cs" />
+    <Compile Include="src\Combinatory.cs" />
+    <Compile Include="src\probabilityCalculator.cs" />
+    <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="forms\CardSelector.resx">
+      <DependentUpon>CardSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\StartScreen.resx">
+      <DependentUpon>StartScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -80,6 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\fondo-mesa-poker-color-verde_47243-1094.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

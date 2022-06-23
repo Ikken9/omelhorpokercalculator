@@ -17,9 +17,11 @@ namespace Proyecto_Combinatoria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-            var container = new CardsContainer();
-            container.generateCards();
+            Application.Run(new StartScreen());
+
+            CardsManager manager = new CardsManager();
+            manager.generateGame();
+            
         }
     }
 }
