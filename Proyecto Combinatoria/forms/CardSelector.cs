@@ -26,5 +26,10 @@ namespace Proyecto_Combinatoria
         {
 
         }
+
+        private void carta1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -28,38 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.elegirPaloComboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.carta1 = new System.Windows.Forms.Panel();
+            this.carta2 = new System.Windows.Forms.Panel();
+            this.panelResultados = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // elegirPaloComboBox
+            // carta1
             // 
-            this.elegirPaloComboBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.elegirPaloComboBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.elegirPaloComboBox.FormattingEnabled = true;
-            this.elegirPaloComboBox.Items.AddRange(new object[] {
-            "Corazones",
-            "Diamantes",
-            "Picas",
-            "Tréboles"});
-            this.elegirPaloComboBox.Location = new System.Drawing.Point(130, 33);
-            this.elegirPaloComboBox.Name = "elegirPaloComboBox";
-            this.elegirPaloComboBox.Size = new System.Drawing.Size(121, 25);
-            this.elegirPaloComboBox.Sorted = true;
-            this.elegirPaloComboBox.TabIndex = 0;
-            this.elegirPaloComboBox.SelectedIndexChanged += new System.EventHandler(this.elegirPaloComboBox_SelectedIndexChanged);
+            this.carta1.BackColor = System.Drawing.Color.Transparent;
+            this.carta1.Location = new System.Drawing.Point(42, 80);
+            this.carta1.Name = "carta1";
+            this.carta1.Size = new System.Drawing.Size(163, 277);
+            this.carta1.TabIndex = 0;
+            this.carta1.Paint += new System.Windows.Forms.PaintEventHandler(this.carta1_Paint);
             // 
-            // label1
+            // carta2
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(20, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Elegir palo ";
+            this.carta2.BackColor = System.Drawing.Color.Transparent;
+            this.carta2.Location = new System.Drawing.Point(250, 80);
+            this.carta2.Name = "carta2";
+            this.carta2.Size = new System.Drawing.Size(163, 277);
+            this.carta2.TabIndex = 1;
+            // 
+            // panelResultados
+            // 
+            this.panelResultados.BackColor = System.Drawing.Color.Transparent;
+            this.panelResultados.Location = new System.Drawing.Point(530, 80);
+            this.panelResultados.Name = "panelResultados";
+            this.panelResultados.Size = new System.Drawing.Size(286, 277);
+            this.panelResultados.TabIndex = 2;
             // 
             // CardSelector
             // 
@@ -70,19 +67,20 @@
             this.BackgroundImage = global::Proyecto_Combinatoria.Properties.Resources.fondo_mesa_poker_color_verde_47243_1094;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(854, 506);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.elegirPaloComboBox);
+            this.Controls.Add(this.panelResultados);
+            this.Controls.Add(this.carta2);
+            this.Controls.Add(this.carta1);
             this.Name = "CardSelector";
             this.Text = "Card selector";
             this.Load += new System.EventHandler(this.CardSelector_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox elegirPaloComboBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel carta1;
+        private System.Windows.Forms.Panel carta2;
+        private System.Windows.Forms.Panel panelResultados;
     }
 }
