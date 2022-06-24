@@ -55,10 +55,10 @@ namespace Proyecto_Combinatoria
         private void carta1_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, carta1.ClientRectangle,
-                Color.Yellow, 4, ButtonBorderStyle.Solid,
-                Color.Yellow, 4, ButtonBorderStyle.Solid,
-                Color.Yellow, 4, ButtonBorderStyle.Solid,
-                Color.Yellow, 4, ButtonBorderStyle.Solid
+                Color.Yellow, 3, ButtonBorderStyle.Solid,
+                Color.Yellow, 3, ButtonBorderStyle.Solid,
+                Color.Yellow, 3, ButtonBorderStyle.Solid,
+                Color.Yellow, 3, ButtonBorderStyle.Solid
                 );
         }
 
@@ -66,20 +66,20 @@ namespace Proyecto_Combinatoria
         private void carta2_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, carta2.ClientRectangle,
-                Color.Yellow, 4, ButtonBorderStyle.Solid,
-                Color.Yellow, 4, ButtonBorderStyle.Solid,
-                Color.Yellow, 4, ButtonBorderStyle.Solid,
-                Color.Yellow, 4, ButtonBorderStyle.Solid
+                Color.Yellow, 3, ButtonBorderStyle.Solid,
+                Color.Yellow, 3, ButtonBorderStyle.Solid,
+                Color.Yellow, 3, ButtonBorderStyle.Solid,
+                Color.Yellow, 3, ButtonBorderStyle.Solid
                 );
         }
 
         private void panelResultados_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, panelResultados.ClientRectangle,
-               Color.Yellow, 4, ButtonBorderStyle.Solid,
-               Color.Yellow, 4, ButtonBorderStyle.Solid,
-               Color.Yellow, 4, ButtonBorderStyle.Solid,
-               Color.Yellow, 4, ButtonBorderStyle.Solid
+               Color.Yellow, 3, ButtonBorderStyle.Solid,
+               Color.Yellow, 3, ButtonBorderStyle.Solid,
+               Color.Yellow, 3, ButtonBorderStyle.Solid,
+               Color.Yellow, 3, ButtonBorderStyle.Solid
                );
         }
 
@@ -91,6 +91,48 @@ namespace Proyecto_Combinatoria
         private void tituloJugadas_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            Card[] heart = CardsManager.getHeartCards();
+            Card[] clubs = CardsManager.getClubCards();
+            Image image1 = CardSelector.ResizeImage(heart[0].CardImage, carta1.Width, carta1.Height);
+            Image image2 = CardSelector.ResizeImage(clubs[9].CardImage, carta2.Width, carta2.Height);
+            carta1.BackgroundImage = image1;
+            carta2.BackgroundImage = image2;
+            elegirCarta1.Text = string.Empty;
+            elegirCarta2.Text = String.Empty;
+        }
+
+
+        private void elegirCarta1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void elegirCarta2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Redimenziona una imagen que se le pasa como parámetro con el ancho y alto especificados.
+        public static Image ResizeImage(Image image, int width, int height)
+        {
+            // Obtener el tamaño máximo.
+            double Radio = Math.Max((double)width / image.Width, (double)height / image.Height);
+
+            // Nuevo ancho y alto según el radio redimensionado
+            int NewWidth = (int)Math.Round(image.Width * Radio);
+            int NewHeight = (int)Math.Round(image.Height * Radio);
+
+            // Creamos el bitmap con los nuevos tamaños.
+            Bitmap newSize = new Bitmap(NewWidth, NewHeight);
+
+            // Copiamos la imagen y la convertimos en bitmap.
+            Graphics.FromImage(newSize).DrawImage(image, 0, 0, NewWidth, NewHeight);
+            Bitmap finalImage = new Bitmap(newSize);
+            return finalImage;
         }
     }
 }

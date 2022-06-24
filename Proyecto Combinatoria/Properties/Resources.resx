@@ -118,7 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="fondo-mesa-poker-color-verde_47243-1094" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\fondo-mesa-poker-color-verde_47243-1094.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RedDeadOnline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\RedDeadOnline.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo_mesa_poker_color_verde_47243_1094" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\fondo-mesa-poker-color-verde_47243-1094.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedDeadOnline2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\RedDeadOnline2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

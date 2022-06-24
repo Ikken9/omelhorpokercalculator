@@ -52,9 +52,9 @@ namespace Proyecto_Combinatoria
             // 
             this.carta1.BackColor = System.Drawing.Color.Transparent;
             this.carta1.Controls.Add(this.elegirCarta1);
-            this.carta1.Location = new System.Drawing.Point(42, 80);
+            this.carta1.Location = new System.Drawing.Point(29, 59);
             this.carta1.Name = "carta1";
-            this.carta1.Size = new System.Drawing.Size(163, 277);
+            this.carta1.Size = new System.Drawing.Size(198, 286);
             this.carta1.TabIndex = 0;
             this.carta1.Paint += new System.Windows.Forms.PaintEventHandler(this.carta1_Paint);
             // 
@@ -64,19 +64,20 @@ namespace Proyecto_Combinatoria
             this.elegirCarta1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.elegirCarta1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.elegirCarta1.ForeColor = System.Drawing.Color.White;
-            this.elegirCarta1.Location = new System.Drawing.Point(20, 122);
+            this.elegirCarta1.Location = new System.Drawing.Point(26, 122);
             this.elegirCarta1.Name = "elegirCarta1";
             this.elegirCarta1.Size = new System.Drawing.Size(122, 24);
             this.elegirCarta1.TabIndex = 0;
             this.elegirCarta1.Text = "Elegir Carta 1";
+            this.elegirCarta1.Click += new System.EventHandler(this.elegirCarta1_Click);
             // 
             // carta2
             // 
             this.carta2.BackColor = System.Drawing.Color.Transparent;
             this.carta2.Controls.Add(this.elegirCarta2);
-            this.carta2.Location = new System.Drawing.Point(250, 80);
+            this.carta2.Location = new System.Drawing.Point(301, 59);
             this.carta2.Name = "carta2";
-            this.carta2.Size = new System.Drawing.Size(163, 277);
+            this.carta2.Size = new System.Drawing.Size(198, 286);
             this.carta2.TabIndex = 1;
             this.carta2.Paint += new System.Windows.Forms.PaintEventHandler(this.carta2_Paint);
             // 
@@ -91,6 +92,7 @@ namespace Proyecto_Combinatoria
             this.elegirCarta2.Size = new System.Drawing.Size(122, 24);
             this.elegirCarta2.TabIndex = 0;
             this.elegirCarta2.Text = "Elegir Carta 2";
+            this.elegirCarta2.Click += new System.EventHandler(this.elegirCarta2_Click);
             // 
             // panelResultados
             // 
@@ -102,7 +104,7 @@ namespace Proyecto_Combinatoria
             this.panelResultados.Controls.Add(this.jugadaPoker);
             this.panelResultados.Controls.Add(this.jugadaFullHouse);
             this.panelResultados.Controls.Add(this.jugadaColor);
-            this.panelResultados.Location = new System.Drawing.Point(530, 80);
+            this.panelResultados.Location = new System.Drawing.Point(606, 59);
             this.panelResultados.Name = "panelResultados";
             this.panelResultados.Size = new System.Drawing.Size(286, 277);
             this.panelResultados.TabIndex = 2;
@@ -189,12 +191,13 @@ namespace Proyecto_Combinatoria
             this.calculateButton.BackColor = System.Drawing.Color.Yellow;
             this.calculateButton.Font = new System.Drawing.Font("Cascadia Code", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateButton.ForeColor = System.Drawing.Color.Black;
-            this.calculateButton.Location = new System.Drawing.Point(367, 437);
+            this.calculateButton.Location = new System.Drawing.Point(411, 488);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(133, 39);
             this.calculateButton.TabIndex = 3;
             this.calculateButton.Text = "CALCULAR";
             this.calculateButton.UseVisualStyleBackColor = false;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // CardSelector
             // 
@@ -204,7 +207,7 @@ namespace Proyecto_Combinatoria
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BackgroundImage = global::Proyecto_Combinatoria.Properties.Resources.fondo_mesa_poker_color_verde_47243_1094;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(854, 506);
+            this.ClientSize = new System.Drawing.Size(939, 555);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.panelResultados);
             this.Controls.Add(this.carta2);

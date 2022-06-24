@@ -65,7 +65,27 @@ namespace Proyecto_Combinatoria.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap fondo_mesa_poker_color_verde_47243_1094 {
             get {
-                object obj = ResourceManager.GetObject("fondo-mesa-poker-color-verde_47243-1094", resourceCulture);
+                object obj = ResourceManager.GetObject("fondo_mesa_poker_color_verde_47243_1094", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RedDeadOnline {
+            get {
+                object obj = ResourceManager.GetObject("RedDeadOnline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RedDeadOnline2 {
+            get {
+                object obj = ResourceManager.GetObject("RedDeadOnline2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -57,6 +57,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\HeartCardsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HeartCardsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DiamondCardsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiamondCardsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ClubCardsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubCardsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SpadeCardsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpadeCardsResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="src\CardsManager.cs" />
     <Compile Include="forms\StartScreen.cs">
       <SubType>Form</SubType>
@@ -80,6 +100,22 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HeartCardsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HeartCardsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DiamondCardsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DiamondCardsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ClubCardsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ClubCardsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SpadeCardsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SpadeCardsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,63 +130,65 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\fondo-mesa-poker-color-verde_47243-1094.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="images\cards\black_joker.png" />
-    <Content Include="images\cards\corazones\10_of_hearts.png" />
-    <Content Include="images\cards\corazones\2_of_hearts.png" />
-    <Content Include="images\cards\corazones\3_of_hearts.png" />
-    <Content Include="images\cards\corazones\4_of_hearts.png" />
-    <Content Include="images\cards\corazones\5_of_hearts.png" />
-    <Content Include="images\cards\corazones\6_of_hearts.png" />
-    <Content Include="images\cards\corazones\7_of_hearts.png" />
-    <Content Include="images\cards\corazones\8_of_hearts.png" />
-    <Content Include="images\cards\corazones\9_of_hearts.png" />
-    <Content Include="images\cards\corazones\ace_of_hearts.png" />
-    <Content Include="images\cards\corazones\jack_of_hearts2.png" />
-    <Content Include="images\cards\corazones\king_of_hearts2.png" />
-    <Content Include="images\cards\corazones\queen_of_hearts2.png" />
-    <Content Include="images\cards\diamantes\10_of_diamonds.png" />
-    <Content Include="images\cards\diamantes\2_of_diamonds.png" />
-    <Content Include="images\cards\diamantes\3_of_diamonds.png" />
-    <Content Include="images\cards\diamantes\4_of_diamonds.png" />
-    <Content Include="images\cards\diamantes\5_of_diamonds.png" />
-    <Content Include="images\cards\diamantes\6_of_diamonds.png" />
-    <Content Include="images\cards\diamantes\7_of_diamonds.png" />
-    <Content Include="images\cards\diamantes\8_of_diamonds.png" />
-    <Content Include="images\cards\diamantes\9_of_diamonds.png" />
-    <Content Include="images\cards\diamantes\ace_of_diamonds.png" />
-    <Content Include="images\cards\diamantes\jack_of_diamonds2.png" />
-    <Content Include="images\cards\diamantes\king_of_diamonds2.png" />
-    <Content Include="images\cards\diamantes\queen_of_diamonds2.png" />
-    <Content Include="images\cards\picas\10_of_spades.png" />
-    <Content Include="images\cards\picas\2_of_spades.png" />
-    <Content Include="images\cards\picas\3_of_spades.png" />
-    <Content Include="images\cards\picas\4_of_spades.png" />
-    <Content Include="images\cards\picas\5_of_spades.png" />
-    <Content Include="images\cards\picas\6_of_spades.png" />
-    <Content Include="images\cards\picas\7_of_spades.png" />
-    <Content Include="images\cards\picas\8_of_spades.png" />
-    <Content Include="images\cards\picas\9_of_spades.png" />
-    <Content Include="images\cards\picas\ace_of_spades2.png" />
-    <Content Include="images\cards\picas\jack_of_spades2.png" />
-    <Content Include="images\cards\picas\king_of_spades2.png" />
-    <Content Include="images\cards\picas\queen_of_spades2.png" />
-    <Content Include="images\cards\red_joker.png" />
-    <Content Include="images\cards\trebol\10_of_clubs.png" />
-    <Content Include="images\cards\trebol\2_of_clubs.png" />
-    <Content Include="images\cards\trebol\3_of_clubs.png" />
-    <Content Include="images\cards\trebol\4_of_clubs.png" />
-    <Content Include="images\cards\trebol\5_of_clubs.png" />
-    <Content Include="images\cards\trebol\6_of_clubs.png" />
-    <Content Include="images\cards\trebol\7_of_clubs.png" />
-    <Content Include="images\cards\trebol\8_of_clubs.png" />
-    <Content Include="images\cards\trebol\9_of_clubs.png" />
-    <Content Include="images\cards\trebol\ace_of_clubs.png" />
-    <Content Include="images\cards\trebol\jack_of_clubs2.png" />
-    <Content Include="images\cards\trebol\king_of_clubs2.png" />
-    <Content Include="images\cards\trebol\queen_of_clubs2.png" />
+    <Content Include="Resources\images\cards\black_joker.png" />
+    <Content Include="Resources\images\cards\corazones\10_of_hearts.png" />
+    <Content Include="Resources\images\cards\corazones\2_of_hearts.png" />
+    <Content Include="Resources\images\cards\corazones\3_of_hearts.png" />
+    <Content Include="Resources\images\cards\corazones\4_of_hearts.png" />
+    <Content Include="Resources\images\cards\corazones\5_of_hearts.png" />
+    <Content Include="Resources\images\cards\corazones\6_of_hearts.png" />
+    <Content Include="Resources\images\cards\corazones\7_of_hearts.png" />
+    <Content Include="Resources\images\cards\corazones\8_of_hearts.png" />
+    <Content Include="Resources\images\cards\corazones\9_of_hearts.png" />
+    <Content Include="Resources\images\cards\corazones\ace_of_hearts.png" />
+    <Content Include="Resources\images\cards\corazones\jack_of_hearts2.png" />
+    <Content Include="Resources\images\cards\corazones\king_of_hearts2.png" />
+    <Content Include="Resources\images\cards\corazones\queen_of_hearts2.png" />
+    <Content Include="Resources\images\cards\diamantes\10_of_diamonds.png" />
+    <Content Include="Resources\images\cards\diamantes\2_of_diamonds.png" />
+    <Content Include="Resources\images\cards\diamantes\3_of_diamonds.png" />
+    <Content Include="Resources\images\cards\diamantes\4_of_diamonds.png" />
+    <Content Include="Resources\images\cards\diamantes\5_of_diamonds.png" />
+    <Content Include="Resources\images\cards\diamantes\6_of_diamonds.png" />
+    <Content Include="Resources\images\cards\diamantes\7_of_diamonds.png" />
+    <Content Include="Resources\images\cards\diamantes\8_of_diamonds.png" />
+    <Content Include="Resources\images\cards\diamantes\9_of_diamonds.png" />
+    <Content Include="Resources\images\cards\diamantes\ace_of_diamonds.png" />
+    <Content Include="Resources\images\cards\diamantes\jack_of_diamonds2.png" />
+    <Content Include="Resources\images\cards\diamantes\king_of_diamonds2.png" />
+    <Content Include="Resources\images\cards\diamantes\queen_of_diamonds2.png" />
+    <Content Include="Resources\images\cards\picas\10_of_spades.png" />
+    <Content Include="Resources\images\cards\picas\2_of_spades.png" />
+    <Content Include="Resources\images\cards\picas\3_of_spades.png" />
+    <Content Include="Resources\images\cards\picas\4_of_spades.png" />
+    <Content Include="Resources\images\cards\picas\5_of_spades.png" />
+    <Content Include="Resources\images\cards\picas\6_of_spades.png" />
+    <Content Include="Resources\images\cards\picas\7_of_spades.png" />
+    <Content Include="Resources\images\cards\picas\8_of_spades.png" />
+    <Content Include="Resources\images\cards\picas\9_of_spades.png" />
+    <Content Include="Resources\images\cards\picas\ace_of_spades2.png" />
+    <Content Include="Resources\images\cards\picas\jack_of_spades2.png" />
+    <Content Include="Resources\images\cards\picas\king_of_spades2.png" />
+    <Content Include="Resources\images\cards\picas\queen_of_spades2.png" />
+    <Content Include="Resources\images\cards\red_joker.png" />
+    <Content Include="Resources\images\cards\trebol\10_of_clubs.png" />
+    <Content Include="Resources\images\cards\trebol\2_of_clubs.png" />
+    <Content Include="Resources\images\cards\trebol\3_of_clubs.png" />
+    <Content Include="Resources\images\cards\trebol\4_of_clubs.png" />
+    <Content Include="Resources\images\cards\trebol\5_of_clubs.png" />
+    <Content Include="Resources\images\cards\trebol\6_of_clubs.png" />
+    <Content Include="Resources\images\cards\trebol\7_of_clubs.png" />
+    <Content Include="Resources\images\cards\trebol\8_of_clubs.png" />
+    <Content Include="Resources\images\cards\trebol\9_of_clubs.png" />
+    <Content Include="Resources\images\cards\trebol\ace_of_clubs.png" />
+    <Content Include="Resources\images\cards\trebol\jack_of_clubs2.png" />
+    <Content Include="Resources\images\cards\trebol\king_of_clubs2.png" />
+    <Content Include="Resources\images\cards\trebol\queen_of_clubs2.png" />
+    <Content Include="Resources\images\fondo-mesa-poker-color-verde_47243-1094.jpg" />
+    <None Include="Resources\images\RedDeadOnline2.jpg" />
+    <None Include="Resources\images\RedDeadOnline1280 x 720.jpg" />
+    <None Include="Resources\images\red-dead-red-dead-redemption-2-poker-hd-wallpaper-preview.jpg" />
+    <Content Include="Resources\images\RedDeadOnline.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
