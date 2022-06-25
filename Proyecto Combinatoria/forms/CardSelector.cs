@@ -113,7 +113,7 @@ namespace Proyecto_Combinatoria
 
         private void elegirCarta2_Click(object sender, EventArgs e)
         {
-
+            elegirCarta2Box.DroppedDown = true;
         }
 
         // Redimenziona una imagen que se le pasa como parámetro con el ancho y alto especificados.
@@ -133,6 +133,17 @@ namespace Proyecto_Combinatoria
             Graphics.FromImage(newSize).DrawImage(image, 0, 0, NewWidth, NewHeight);
             Bitmap finalImage = new Bitmap(newSize);
             return finalImage;
+        }
+
+        private void elegirCarta1Box_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedItem = elegirCarta1Box.SelectedItem.ToString();
+            MessageBox.Show(selectedItem);
+        }
+
+        private void elegirCarta2Box_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedItem = elegirCarta2Box.SelectedItem.ToString();
         }
     }
 }
