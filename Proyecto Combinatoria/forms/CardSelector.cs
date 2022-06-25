@@ -108,7 +108,7 @@ namespace Proyecto_Combinatoria
 
         private void elegirCarta1_Click(object sender, EventArgs e)
         {
-
+            elegirCarta1Box.DroppedDown = true;
         }
 
         private void elegirCarta2_Click(object sender, EventArgs e)

@@ -43,6 +43,7 @@ namespace Proyecto_Combinatoria
             this.jugadaFullHouse = new System.Windows.Forms.Label();
             this.jugadaColor = new System.Windows.Forms.Label();
             this.calculateButton = new System.Windows.Forms.Button();
+            this.elegirCarta1Box = new System.Windows.Forms.ComboBox();
             this.carta1.SuspendLayout();
             this.carta2.SuspendLayout();
             this.panelResultados.SuspendLayout();
@@ -62,11 +63,11 @@ namespace Proyecto_Combinatoria
             // 
             this.elegirCarta1.AutoSize = true;
             this.elegirCarta1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.elegirCarta1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.elegirCarta1.ForeColor = System.Drawing.Color.White;
-            this.elegirCarta1.Location = new System.Drawing.Point(26, 122);
+            this.elegirCarta1.Font = new System.Drawing.Font("Chinese Rocks Rg", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elegirCarta1.ForeColor = System.Drawing.Color.Black;
+            this.elegirCarta1.Location = new System.Drawing.Point(17, 122);
             this.elegirCarta1.Name = "elegirCarta1";
-            this.elegirCarta1.Size = new System.Drawing.Size(122, 24);
+            this.elegirCarta1.Size = new System.Drawing.Size(165, 35);
             this.elegirCarta1.TabIndex = 0;
             this.elegirCarta1.Text = "Elegir Carta 1";
             this.elegirCarta1.Click += new System.EventHandler(this.elegirCarta1_Click);
@@ -87,7 +88,7 @@ namespace Proyecto_Combinatoria
             this.elegirCarta2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.elegirCarta2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.elegirCarta2.ForeColor = System.Drawing.Color.White;
-            this.elegirCarta2.Location = new System.Drawing.Point(20, 122);
+            this.elegirCarta2.Location = new System.Drawing.Point(38, 122);
             this.elegirCarta2.Name = "elegirCarta2";
             this.elegirCarta2.Size = new System.Drawing.Size(122, 24);
             this.elegirCarta2.TabIndex = 0;
@@ -188,16 +189,35 @@ namespace Proyecto_Combinatoria
             // 
             // calculateButton
             // 
-            this.calculateButton.BackColor = System.Drawing.Color.Yellow;
-            this.calculateButton.Font = new System.Drawing.Font("Cascadia Code", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateButton.BackColor = System.Drawing.Color.Transparent;
+            this.calculateButton.Font = new System.Drawing.Font("Chinese Rocks Rg", 28F);
             this.calculateButton.ForeColor = System.Drawing.Color.Black;
-            this.calculateButton.Location = new System.Drawing.Point(411, 488);
+            this.calculateButton.Location = new System.Drawing.Point(396, 491);
             this.calculateButton.Name = "calculateButton";
-            this.calculateButton.Size = new System.Drawing.Size(133, 39);
+            this.calculateButton.Size = new System.Drawing.Size(171, 52);
             this.calculateButton.TabIndex = 3;
             this.calculateButton.Text = "CALCULAR";
             this.calculateButton.UseVisualStyleBackColor = false;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
+            // 
+            // elegirCarta1Box
+            // 
+            this.elegirCarta1Box.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.elegirCarta1Box.Font = new System.Drawing.Font("Chinese Rocks Rg", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elegirCarta1Box.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.elegirCarta1Box.FormattingEnabled = true;
+            this.elegirCarta1Box.ItemHeight = 23;
+            this.elegirCarta1Box.Items.AddRange(new object[] {
+            "Corazones",
+            "Diamantes",
+            "Picas",
+            "Tréboles"});
+            this.elegirCarta1Box.Location = new System.Drawing.Point(206, 147);
+            this.elegirCarta1Box.Name = "elegirCarta1Box";
+            this.elegirCarta1Box.Size = new System.Drawing.Size(121, 31);
+            this.elegirCarta1Box.Sorted = true;
+            this.elegirCarta1Box.TabIndex = 1;
+            this.elegirCarta1Box.Visible = false;
             // 
             // CardSelector
             // 
@@ -208,6 +228,7 @@ namespace Proyecto_Combinatoria
             this.BackgroundImage = global::Proyecto_Combinatoria.Properties.Resources.fondo_mesa_poker_color_verde_47243_1094;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(939, 555);
+            this.Controls.Add(this.elegirCarta1Box);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.panelResultados);
             this.Controls.Add(this.carta2);
@@ -240,5 +261,6 @@ namespace Proyecto_Combinatoria
         private Label elegirCarta1;
         private Label elegirCarta2;
         private Button calculateButton;
+        private ComboBox elegirCarta1Box;
     }
 }
