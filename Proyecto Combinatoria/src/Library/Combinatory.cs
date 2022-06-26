@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Combinatoria.src
 {
-    public class Combinatory
+    public static class Combinatory
     {
+        
     }
 }

@@ -24,18 +24,18 @@ namespace Proyecto_Combinatoria
         // Array de 13 objetos "Card" de trébol.
         private Card[] clubs = new Card[13];
 
-        public static CardsManager getInstance()
+        public static CardsManager GetInstance()
         {
             if (instance == null)
             {
                 instance = new CardsManager();
-                CardsManager.generateGame();
+                CardsManager.GenerateGame();
             }
             return instance;
         }
 
         // Genera las 13 cartas de corazones.
-        public void generateHeartCards()
+        public void GenerateHeartCards()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeartCardsResource));
             Card aceCard = new Card("A", "Corazones", ((System.Drawing.Image)(resources.GetObject("ace_of_hearts"))));
@@ -55,7 +55,7 @@ namespace Proyecto_Combinatoria
         }
         
         // Genera las 13 cartas de picas.
-        public void generateSpadeCards()
+        public void GenerateSpadeCards()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpadeCardsResource));
             Card aceCard = new Card("A", "Picas", ((System.Drawing.Image)(resources.GetObject("ace_of_spades2"))));
@@ -75,7 +75,7 @@ namespace Proyecto_Combinatoria
         }
 
         // Genera las 13 cartas de diamantes.
-        public void generateDiamondsCards()
+        public void GenerateDiamondsCards()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiamondCardsResource));
             Card aceCard = new Card("A", "Diamantes", ((System.Drawing.Image)(resources.GetObject("ace_of_diamonds"))));
@@ -95,7 +95,7 @@ namespace Proyecto_Combinatoria
         }
 
         // Genera las 13 cartas de tréboles.
-        public void generateClubsCards()
+        public void GenerateClubsCards()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClubCardsResource));
             Card aceCard = new Card("A", "Tréboles", ((System.Drawing.Image)(resources.GetObject("ace_of_clubs"))));
@@ -115,32 +115,39 @@ namespace Proyecto_Combinatoria
         }
 
         // Genera las 52 cartas.
-        public static void generateGame()
+        public static void GenerateGame()
         {
-            instance.generateHeartCards();
-            instance.generateSpadeCards();
-            instance.generateDiamondsCards();
-            instance.generateClubsCards();
+            instance.GenerateHeartCards();
+            instance.GenerateSpadeCards();
+            instance.GenerateDiamondsCards();
+            instance.GenerateClubsCards();
         }
 
-        public static Card[] getHeartCards()
+        // Método que dado un nombre de palo como string devuelve el array de cartas de ese palo.
+        public static Card[] GetSuit(string suit)
         {
-            return instance.heart;
+            switch (suit)
+            {
+                case "Corazones":
+                    return instance.heart;
+
+                case "Diamantes":
+                    return instance.diamonds;
+
+                case "Picas":
+                    return instance.spades;
+
+                case "Tréboles":
+                    return instance.clubs;
+            }
+            return null;
         }
 
-        public static Card[] getSpadeCards()
+        public static Card GetCard(Card[] suit, int value)
         {
-            return instance.spades;
+            Card card = suit[value];
+            return card;
         }
 
-        public static Card[] getDiamondCards()
-        {
-            return instance.diamonds;
-        }
-
-        public static Card[] getClubCards()
-        {
-            return instance.clubs;
-        }
     }
 }

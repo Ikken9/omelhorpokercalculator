@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -77,17 +92,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SpadeCardsResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="src\CardsManager.cs" />
+    <Compile Include="src\Library\Cards\CardsManager.cs" />
     <Compile Include="forms\StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\StartScreen.Designer.cs">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\Card.cs" />
-    <Compile Include="src\Combinatory.cs" />
-    <Compile Include="src\probabilityCalculator.cs" />
-    <Compile Include="src\Program.cs" />
+    <Compile Include="src\Library\Cards\Card.cs" />
+    <Compile Include="src\Library\Combinatory.cs" />
+    <Compile Include="src\Library\probabilityCalculator.cs" />
+    <Compile Include="src\Program\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="forms\CardSelector.resx">
       <DependentUpon>CardSelector.cs</DependentUpon>
@@ -188,7 +203,21 @@
     <None Include="Resources\images\RedDeadOnline2.jpg" />
     <None Include="Resources\images\RedDeadOnline1280 x 720.jpg" />
     <None Include="Resources\images\red-dead-red-dead-redemption-2-poker-hd-wallpaper-preview.jpg" />
+    <None Include="Resources\images\RDR2-FINAL.png" />
     <Content Include="Resources\images\RedDeadOnline.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

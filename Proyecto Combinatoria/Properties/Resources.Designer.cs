@@ -73,6 +73,16 @@ namespace Proyecto_Combinatoria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RDR2_FINAL {
+            get {
+                object obj = ResourceManager.GetObject("RDR2_FINAL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RedDeadOnline {
             get {
                 object obj = ResourceManager.GetObject("RedDeadOnline", resourceCulture);

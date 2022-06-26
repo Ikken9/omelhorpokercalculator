@@ -40,11 +40,11 @@ namespace Proyecto_Combinatoria
             this.Start.FlatAppearance.BorderColor = System.Drawing.Color.AliceBlue;
             this.Start.Font = new System.Drawing.Font("Chinese Rocks Rg", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Start.ForeColor = System.Drawing.Color.Black;
-            this.Start.Location = new System.Drawing.Point(565, 620);
+            this.Start.Location = new System.Drawing.Point(560, 620);
             this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(155, 49);
+            this.Start.Size = new System.Drawing.Size(166, 49);
             this.Start.TabIndex = 4;
-            this.Start.Text = "Start";
+            this.Start.Text = "COMENZAR";
             this.Start.UseVisualStyleBackColor = false;
             this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
@@ -57,8 +57,9 @@ namespace Proyecto_Combinatoria
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.Start);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "StartScreen";
-            this.Text = "Start menu";
+            this.Text = "Pantalla principal";
             this.ResumeLayout(false);
 
         }

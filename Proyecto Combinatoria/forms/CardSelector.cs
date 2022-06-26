@@ -15,40 +15,21 @@ namespace Proyecto_Combinatoria
     {
         private Card card1;
         private Card card2;
-
-        public Card Card1
-        {
-            get => card1;
-  
-            set
-            {
-                if (this.card1 == null)
-                {
-                    this.card1 = value;
-                }
-            }
-        }
-
-        public Card Card2
-        {
-            get => this.card2;
-            set
-            { 
-                if (card2 == null)
-                {
-                    this.card2 = value;
-                }
-            } 
-        }
+        private Card[] suit1;
+        private Card[] suit2;
 
         public CardSelector()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
 
         private void CardSelector_Load(object sender, EventArgs e)
         {
-
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proyecto_Combinatoria.Properties.Resources));
+            Image initialBackground = ResizeImage((System.Drawing.Image)(resources.GetObject("RDR2_FINAL")), carta1.Width, carta1.Height);
+            carta1.BackgroundImage = initialBackground;
+            carta2.BackgroundImage = initialBackground;
         }
 
 
@@ -95,14 +76,7 @@ namespace Proyecto_Combinatoria
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
-            Card[] heart = CardsManager.getHeartCards();
-            Card[] clubs = CardsManager.getClubCards();
-            Image image1 = CardSelector.ResizeImage(heart[0].CardImage, carta1.Width, carta1.Height);
-            Image image2 = CardSelector.ResizeImage(clubs[9].CardImage, carta2.Width, carta2.Height);
-            carta1.BackgroundImage = image1;
-            carta2.BackgroundImage = image2;
-            elegirCarta1.Text = string.Empty;
-            elegirCarta2.Text = String.Empty;
+
         }
 
 
@@ -114,6 +88,50 @@ namespace Proyecto_Combinatoria
         private void elegirCarta2_Click(object sender, EventArgs e)
         {
             elegirCarta2Box.DroppedDown = true;
+        }
+
+        private void elegirCarta1Box_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            suit1 = CardsManager.GetSuit(elegirCarta1Box.SelectedItem.ToString());
+            elegirNumeroBox1.Items.Clear();
+            foreach (Card card in suit1)
+            {
+                elegirNumeroBox1.Items.Add(card.Value);
+            }
+
+            elegirNumeroBox1.DroppedDown = true;
+        }
+
+        private void elegirCarta2Box_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            suit2 = CardsManager.GetSuit(elegirCarta2Box.SelectedItem.ToString());
+            elegirNumeroBox2.Items.Clear();
+            foreach (Card card in suit2)
+            {
+                elegirNumeroBox2.Items.Add(card.Value);
+            }
+
+            elegirNumeroBox2.DroppedDown = true;
+        }
+
+        private void elegirNumeroBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = elegirNumeroBox1.SelectedIndex;
+            card1 = CardsManager.GetCard(suit1, index);
+            Image image = ResizeImage(card1.CardImage, carta1.Width, carta1.Height);
+            carta1.BackgroundImage = image;
+            elegirCarta1.Text = String.Empty;
+            resetButton.Visible = true;
+        }
+
+        private void elegirNumeroBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = elegirNumeroBox2.SelectedIndex;
+            card2 = CardsManager.GetCard(suit2, index);
+            Image image = ResizeImage(card2.CardImage, carta2.Width, carta2.Height);
+            carta2.BackgroundImage = image;
+            elegirCarta2.Text = String.Empty;
+            resetButton.Visible = true;
         }
 
         // Redimenziona una imagen que se le pasa como parámetro con el ancho y alto especificados.
@@ -135,15 +153,22 @@ namespace Proyecto_Combinatoria
             return finalImage;
         }
 
-        private void elegirCarta1Box_SelectedIndexChanged(object sender, EventArgs e)
+        private void salirButton_Click(object sender, EventArgs e)
         {
-            string selectedItem = elegirCarta1Box.SelectedItem.ToString();
-            MessageBox.Show(selectedItem);
+            Application.Exit();
         }
 
-        private void elegirCarta2Box_SelectedIndexChanged(object sender, EventArgs e)
+        private void resetButton_Click(object sender, EventArgs e)
         {
-            string selectedItem = elegirCarta2Box.SelectedItem.ToString();
+            card1 = null;
+            elegirCarta1.Text = "Elegir Carta 1";
+            card2 = null;
+            elegirCarta2.Text = "Elegir Carta 2";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proyecto_Combinatoria.Properties.Resources));
+            Image initialBackground = ResizeImage((System.Drawing.Image)(resources.GetObject("RDR2_FINAL")), carta1.Width, carta1.Height);
+            carta1.BackgroundImage = initialBackground;
+            carta2.BackgroundImage = initialBackground;
+            resetButton.Visible = false;
         }
     }
 }

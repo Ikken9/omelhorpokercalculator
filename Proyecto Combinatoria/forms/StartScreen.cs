@@ -17,25 +17,11 @@ namespace Proyecto_Combinatoria
             InitializeComponent();
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Start_Click(object sender, EventArgs e)
         {
-            CardsManager.generateGame();
+            CardsManager.GenerateGame();
             new CardSelector().Show();
+            this.Visible = false;
         }
     }
 }
