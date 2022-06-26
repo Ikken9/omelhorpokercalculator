@@ -1,4 +1,6 @@
-﻿namespace Proyecto_Combinatoria
+﻿using System.Drawing;
+
+namespace Proyecto_Combinatoria
 {
     partial class StartScreen
     {
@@ -28,35 +30,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartScreen));
-            this.backgroundImage = new System.Windows.Forms.PictureBox();
             this.Start = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // backgroundImage
-            // 
-            this.backgroundImage.Image = ((System.Drawing.Image)(resources.GetObject("backgroundImage.Image")));
-            this.backgroundImage.Location = new System.Drawing.Point(0, 0);
-            this.backgroundImage.Name = "backgroundImage";
-            this.backgroundImage.Size = new System.Drawing.Size(850, 350);
-            this.backgroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.backgroundImage.TabIndex = 3;
-            this.backgroundImage.TabStop = false;
-            this.backgroundImage.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Start
             // 
-            this.Start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(7)))), ((int)(((byte)(18)))));
+            this.Start.BackColor = System.Drawing.Color.Transparent;
             this.Start.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Start.FlatAppearance.BorderColor = System.Drawing.Color.AliceBlue;
-            this.Start.Font = new System.Drawing.Font("Cascadia Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Start.ForeColor = System.Drawing.Color.White;
-            this.Start.Location = new System.Drawing.Point(352, 466);
+            this.Start.Font = new System.Drawing.Font("Chinese Rocks Rg", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Start.ForeColor = System.Drawing.Color.Black;
+            this.Start.Location = new System.Drawing.Point(560, 620);
             this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(155, 49);
+            this.Start.Size = new System.Drawing.Size(166, 49);
             this.Start.TabIndex = 4;
-            this.Start.Text = "Start";
+            this.Start.Text = "COMENZAR";
             this.Start.UseVisualStyleBackColor = false;
             this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
@@ -65,19 +53,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(7)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(850, 600);
+            this.BackgroundImage = global::Proyecto_Combinatoria.Properties.Resources.RedDeadOnline2;
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.Start);
-            this.Controls.Add(this.backgroundImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "StartScreen";
-            this.Text = "Start menu";
-            ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).EndInit();
+            this.Text = "Pantalla principal";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox backgroundImage;
         private System.Windows.Forms.Button Start;
     }
 }

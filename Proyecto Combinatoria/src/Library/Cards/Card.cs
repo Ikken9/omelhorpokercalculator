@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Proyecto_Combinatoria
 {
@@ -14,10 +15,14 @@ namespace Proyecto_Combinatoria
         // palo de la carta.
         public readonly string Suit;
 
-        public Card(string value, string suit)
+        // imagen correspondiente a la carta
+        public readonly Image CardImage;
+
+        public Card(string value, string suit, Image cardImage)
         {
             this.Value = value;
             this.Suit = suit;
+            this.CardImage = cardImage;
         }
     }
 }
