@@ -15,6 +15,12 @@ namespace Proyecto_Combinatoria
     {
         private Card card1;
         private Card card2;
+
+        public Card Card1 => card1;
+        public Card Card2 => card2;
+        
+        
+
         private Card[] suit1;
         private Card[] suit2;
 
