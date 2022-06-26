@@ -19,8 +19,6 @@ namespace Proyecto_Combinatoria
         public Card Card1 => card1;
         public Card Card2 => card2;
         
-        
-
         private Card[] suit1;
         private Card[] suit2;
 

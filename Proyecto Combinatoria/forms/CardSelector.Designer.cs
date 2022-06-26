@@ -39,6 +39,10 @@ namespace Proyecto_Combinatoria
             this.elegirCarta2Box = new System.Windows.Forms.ComboBox();
             this.elegirCarta2 = new System.Windows.Forms.Label();
             this.panelResultados = new System.Windows.Forms.Panel();
+            this.resultadoEscaleraReal = new System.Windows.Forms.Label();
+            this.resultadoPoker = new System.Windows.Forms.Label();
+            this.resultadoFullHouse = new System.Windows.Forms.Label();
+            this.resultadoColor = new System.Windows.Forms.Label();
             this.tituloResultado = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tituloJugadas = new System.Windows.Forms.Label();
@@ -49,10 +53,6 @@ namespace Proyecto_Combinatoria
             this.calculateButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
             this.salirButton = new System.Windows.Forms.Button();
-            this.resultadoColor = new System.Windows.Forms.Label();
-            this.resultadoFullHouse = new System.Windows.Forms.Label();
-            this.resultadoPoker = new System.Windows.Forms.Label();
-            this.resultadoEscaleraReal = new System.Windows.Forms.Label();
             this.carta1.SuspendLayout();
             this.carta2.SuspendLayout();
             this.panelResultados.SuspendLayout();
@@ -188,6 +188,50 @@ namespace Proyecto_Combinatoria
             this.panelResultados.TabIndex = 2;
             this.panelResultados.Paint += new System.Windows.Forms.PaintEventHandler(this.panelResultados_Paint);
             // 
+            // resultadoEscaleraReal
+            // 
+            this.resultadoEscaleraReal.AutoSize = true;
+            this.resultadoEscaleraReal.Font = new System.Drawing.Font("Chinese Rocks Rg", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultadoEscaleraReal.ForeColor = System.Drawing.Color.White;
+            this.resultadoEscaleraReal.Location = new System.Drawing.Point(200, 231);
+            this.resultadoEscaleraReal.Name = "resultadoEscaleraReal";
+            this.resultadoEscaleraReal.Size = new System.Drawing.Size(27, 25);
+            this.resultadoEscaleraReal.TabIndex = 10;
+            this.resultadoEscaleraReal.Text = "...";
+            // 
+            // resultadoPoker
+            // 
+            this.resultadoPoker.AutoSize = true;
+            this.resultadoPoker.Font = new System.Drawing.Font("Chinese Rocks Rg", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultadoPoker.ForeColor = System.Drawing.Color.White;
+            this.resultadoPoker.Location = new System.Drawing.Point(200, 179);
+            this.resultadoPoker.Name = "resultadoPoker";
+            this.resultadoPoker.Size = new System.Drawing.Size(27, 25);
+            this.resultadoPoker.TabIndex = 9;
+            this.resultadoPoker.Text = "...";
+            // 
+            // resultadoFullHouse
+            // 
+            this.resultadoFullHouse.AutoSize = true;
+            this.resultadoFullHouse.Font = new System.Drawing.Font("Chinese Rocks Rg", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultadoFullHouse.ForeColor = System.Drawing.Color.White;
+            this.resultadoFullHouse.Location = new System.Drawing.Point(200, 121);
+            this.resultadoFullHouse.Name = "resultadoFullHouse";
+            this.resultadoFullHouse.Size = new System.Drawing.Size(27, 25);
+            this.resultadoFullHouse.TabIndex = 8;
+            this.resultadoFullHouse.Text = "...";
+            // 
+            // resultadoColor
+            // 
+            this.resultadoColor.AutoSize = true;
+            this.resultadoColor.Font = new System.Drawing.Font("Chinese Rocks Rg", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultadoColor.ForeColor = System.Drawing.Color.White;
+            this.resultadoColor.Location = new System.Drawing.Point(200, 71);
+            this.resultadoColor.Name = "resultadoColor";
+            this.resultadoColor.Size = new System.Drawing.Size(27, 25);
+            this.resultadoColor.TabIndex = 7;
+            this.resultadoColor.Text = "...";
+            // 
             // tituloResultado
             // 
             this.tituloResultado.AutoSize = true;
@@ -222,44 +266,44 @@ namespace Proyecto_Combinatoria
             // jugadaEscaleraReal
             // 
             this.jugadaEscaleraReal.AutoSize = true;
-            this.jugadaEscaleraReal.Font = new System.Drawing.Font("Chinese Rocks Rg", 14.25F);
+            this.jugadaEscaleraReal.Font = new System.Drawing.Font("Chinese Rocks Rg", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jugadaEscaleraReal.ForeColor = System.Drawing.Color.White;
-            this.jugadaEscaleraReal.Location = new System.Drawing.Point(17, 220);
+            this.jugadaEscaleraReal.Location = new System.Drawing.Point(16, 231);
             this.jugadaEscaleraReal.Name = "jugadaEscaleraReal";
-            this.jugadaEscaleraReal.Size = new System.Drawing.Size(116, 23);
+            this.jugadaEscaleraReal.Size = new System.Drawing.Size(128, 25);
             this.jugadaEscaleraReal.TabIndex = 3;
             this.jugadaEscaleraReal.Text = "Escalera Real:";
             // 
             // jugadaPoker
             // 
             this.jugadaPoker.AutoSize = true;
-            this.jugadaPoker.Font = new System.Drawing.Font("Chinese Rocks Rg", 14.25F);
+            this.jugadaPoker.Font = new System.Drawing.Font("Chinese Rocks Rg", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jugadaPoker.ForeColor = System.Drawing.Color.White;
-            this.jugadaPoker.Location = new System.Drawing.Point(17, 170);
+            this.jugadaPoker.Location = new System.Drawing.Point(16, 179);
             this.jugadaPoker.Name = "jugadaPoker";
-            this.jugadaPoker.Size = new System.Drawing.Size(56, 23);
+            this.jugadaPoker.Size = new System.Drawing.Size(62, 25);
             this.jugadaPoker.TabIndex = 2;
             this.jugadaPoker.Text = "Poker:";
             // 
             // jugadaFullHouse
             // 
             this.jugadaFullHouse.AutoSize = true;
-            this.jugadaFullHouse.Font = new System.Drawing.Font("Chinese Rocks Rg", 14.25F);
+            this.jugadaFullHouse.Font = new System.Drawing.Font("Chinese Rocks Rg", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jugadaFullHouse.ForeColor = System.Drawing.Color.White;
-            this.jugadaFullHouse.Location = new System.Drawing.Point(17, 123);
+            this.jugadaFullHouse.Location = new System.Drawing.Point(16, 123);
             this.jugadaFullHouse.Name = "jugadaFullHouse";
-            this.jugadaFullHouse.Size = new System.Drawing.Size(91, 23);
+            this.jugadaFullHouse.Size = new System.Drawing.Size(103, 25);
             this.jugadaFullHouse.TabIndex = 1;
             this.jugadaFullHouse.Text = "Full House:";
             // 
             // jugadaColor
             // 
             this.jugadaColor.AutoSize = true;
-            this.jugadaColor.Font = new System.Drawing.Font("Chinese Rocks Rg", 14.25F);
+            this.jugadaColor.Font = new System.Drawing.Font("Chinese Rocks Rg", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jugadaColor.ForeColor = System.Drawing.Color.White;
-            this.jugadaColor.Location = new System.Drawing.Point(17, 71);
+            this.jugadaColor.Location = new System.Drawing.Point(16, 71);
             this.jugadaColor.Name = "jugadaColor";
-            this.jugadaColor.Size = new System.Drawing.Size(57, 23);
+            this.jugadaColor.Size = new System.Drawing.Size(64, 25);
             this.jugadaColor.TabIndex = 0;
             this.jugadaColor.Text = "Color:";
             this.jugadaColor.Click += new System.EventHandler(this.jugadaColor_Click);
@@ -303,46 +347,6 @@ namespace Proyecto_Combinatoria
             this.salirButton.Text = "SALIR";
             this.salirButton.UseVisualStyleBackColor = false;
             this.salirButton.Click += new System.EventHandler(this.salirButton_Click);
-            // 
-            // resultadoColor
-            // 
-            this.resultadoColor.AutoSize = true;
-            this.resultadoColor.Font = new System.Drawing.Font("Chinese Rocks Rg", 14.25F);
-            this.resultadoColor.ForeColor = System.Drawing.Color.Red;
-            this.resultadoColor.Location = new System.Drawing.Point(171, 71);
-            this.resultadoColor.Name = "resultadoColor";
-            this.resultadoColor.Size = new System.Drawing.Size(0, 23);
-            this.resultadoColor.TabIndex = 7;
-            // 
-            // resultadoFullHouse
-            // 
-            this.resultadoFullHouse.AutoSize = true;
-            this.resultadoFullHouse.Font = new System.Drawing.Font("Chinese Rocks Rg", 14.25F);
-            this.resultadoFullHouse.ForeColor = System.Drawing.Color.Red;
-            this.resultadoFullHouse.Location = new System.Drawing.Point(175, 130);
-            this.resultadoFullHouse.Name = "resultadoFullHouse";
-            this.resultadoFullHouse.Size = new System.Drawing.Size(0, 23);
-            this.resultadoFullHouse.TabIndex = 8;
-            // 
-            // resultadoPoker
-            // 
-            this.resultadoPoker.AutoSize = true;
-            this.resultadoPoker.Font = new System.Drawing.Font("Chinese Rocks Rg", 14.25F);
-            this.resultadoPoker.ForeColor = System.Drawing.Color.Red;
-            this.resultadoPoker.Location = new System.Drawing.Point(171, 170);
-            this.resultadoPoker.Name = "resultadoPoker";
-            this.resultadoPoker.Size = new System.Drawing.Size(0, 23);
-            this.resultadoPoker.TabIndex = 9;
-            // 
-            // resultadoEscaleraReal
-            // 
-            this.resultadoEscaleraReal.AutoSize = true;
-            this.resultadoEscaleraReal.Font = new System.Drawing.Font("Chinese Rocks Rg", 14.25F);
-            this.resultadoEscaleraReal.ForeColor = System.Drawing.Color.Red;
-            this.resultadoEscaleraReal.Location = new System.Drawing.Point(171, 220);
-            this.resultadoEscaleraReal.Name = "resultadoEscaleraReal";
-            this.resultadoEscaleraReal.Size = new System.Drawing.Size(0, 23);
-            this.resultadoEscaleraReal.TabIndex = 10;
             // 
             // CardSelector
             // 
