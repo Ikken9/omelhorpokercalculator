@@ -100,7 +100,7 @@ namespace Proyecto_Combinatoria
             elegirNumeroBox1.Items.Clear();
             foreach (Card card in suit1)
             {
-                elegirNumeroBox1.Items.Add(card.Value);
+                elegirNumeroBox1.Items.Add($"{card.Value} de {card.Suit}");
             }
 
             elegirNumeroBox1.DroppedDown = true;
@@ -112,7 +112,7 @@ namespace Proyecto_Combinatoria
             elegirNumeroBox2.Items.Clear();
             foreach (Card card in suit2)
             {
-                elegirNumeroBox2.Items.Add(card.Value);
+                elegirNumeroBox2.Items.Add($"{card.Value} de {card.Suit}");
             }
 
             elegirNumeroBox2.DroppedDown = true;
