@@ -200,6 +200,7 @@
     <Content Include="Resources\images\cards\trebol\king_of_clubs2.png" />
     <Content Include="Resources\images\cards\trebol\queen_of_clubs2.png" />
     <Content Include="Resources\images\fondo-mesa-poker-color-verde_47243-1094.jpg" />
+    <Compile Include="Fonts\chinese rocks rg.otf" />
     <None Include="Resources\images\RedDeadOnline2.jpg" />
     <None Include="Resources\images\RedDeadOnline1280 x 720.jpg" />
     <None Include="Resources\images\red-dead-red-dead-redemption-2-poker-hd-wallpaper-preview.jpg" />
