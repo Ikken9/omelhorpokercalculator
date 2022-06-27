@@ -100,7 +100,7 @@
       <DependentUpon>StartScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Library\Cards\Card.cs" />
-    <Compile Include="src\Library\Combinatory.cs" />
+    <Compile Include="src\Library\Calcs.cs" />
     <Compile Include="src\Library\probabilityCalculator.cs" />
     <Compile Include="src\Program\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -100,7 +100,7 @@ namespace Proyecto_Combinatoria
             elegirNumeroBox1.Items.Clear();
             foreach (Card card in suit1)
             {
-                elegirNumeroBox1.Items.Add(card.Value);
+                elegirNumeroBox1.Items.Add($"{card.Value} de {card.Suit}");
             }
 
             elegirNumeroBox1.DroppedDown = true;
@@ -112,7 +112,7 @@ namespace Proyecto_Combinatoria
             elegirNumeroBox2.Items.Clear();
             foreach (Card card in suit2)
             {
-                elegirNumeroBox2.Items.Add(card.Value);
+                elegirNumeroBox2.Items.Add($"{card.Value} de {card.Suit}");
             }
 
             elegirNumeroBox2.DroppedDown = true;
@@ -120,22 +120,48 @@ namespace Proyecto_Combinatoria
 
         private void elegirNumeroBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = elegirNumeroBox1.SelectedIndex;
-            card1 = CardsManager.GetCard(suit1, index);
-            Image image = ResizeImage(card1.CardImage, carta1.Width, carta1.Height);
-            carta1.BackgroundImage = image;
-            elegirCarta1.Text = String.Empty;
-            resetButton.Visible = true;
+            try
+            {
+                int index = elegirNumeroBox1.SelectedIndex;
+                card1 = CardsManager.GetCard(suit1, index);
+                if (card1.Equals(card2))
+                {
+                    throw new Exception();
+                }
+
+                Image image = ResizeImage(card1.CardImage, carta1.Width, carta1.Height);
+                carta1.BackgroundImage = image;
+                elegirCarta1.Text = String.Empty;
+                resetButton.Visible = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ya se elijió esa carta.", "Error");
+            }
+            
         }
 
         private void elegirNumeroBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = elegirNumeroBox2.SelectedIndex;
-            card2 = CardsManager.GetCard(suit2, index);
-            Image image = ResizeImage(card2.CardImage, carta2.Width, carta2.Height);
-            carta2.BackgroundImage = image;
-            elegirCarta2.Text = String.Empty;
-            resetButton.Visible = true;
+            try
+            {
+                int index = elegirNumeroBox2.SelectedIndex;
+                card2 = CardsManager.GetCard(suit2, index);
+                if (card2.Equals(card1))
+                {
+                    throw new Exception();
+                }
+
+                Image image = ResizeImage(card2.CardImage, carta2.Width, carta2.Height);
+                carta2.BackgroundImage = image;
+                elegirCarta2.Text = String.Empty;
+                resetButton.Visible = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ya se elijió esa carta.", "Error");
+            }
+            
         }
 
         // Redimenziona una imagen que se le pasa como parámetro con el ancho y alto especificados.
