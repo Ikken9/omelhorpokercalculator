@@ -50,7 +50,7 @@ namespace Proyecto_Combinatoria
             instance.heart[10] = jCard;
             Card qCard = new Card("Q", "Corazones", ((System.Drawing.Image)(resources.GetObject("queen_of_hearts2"))));
             instance.heart[11] = qCard;
-            Card kCard = new Card("K", "Corazones", ((System.Drawing.Image)(resources.GetObject("king_of_hearts"))));
+            Card kCard = new Card("K", "Corazones", ((System.Drawing.Image)(resources.GetObject("king_of_hearts2"))));
             instance.heart[12] = kCard;
         }
         

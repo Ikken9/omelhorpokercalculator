@@ -20,6 +20,28 @@ namespace Proyecto_Combinatoria
             return resultado;
         }
 
+        private static bool CheckIfCardIsReal(Card card)
+        {
+            switch (card.Value)
+            {
+                case "10":
+                    return true;
+
+                case "J":
+                    return true;
+
+                case "Q":
+                    return true;
+
+                case "K":
+                    return true;
+
+                case "A":
+                    return true;
+            }
+            return false;
+        }
+
         // n número de arriba / p número de abajo.
         public static long Combinaciones(int n, int p)
         {
@@ -38,11 +60,39 @@ namespace Proyecto_Combinatoria
             if (card1.Suit.Equals(card2.Suit))
             {
                 colorResult = Math.Round(SuitedCardsFlush(), 6);
+
+                // Cartas del mismo palo y ambas reales. (10 o J o Q o K o A)
+                if (CheckIfCardIsReal(card1) && CheckIfCardIsReal(card2))
+                {
+                    royalFlushResult = Math.Round(SuitedRoyalCardsFlush(), 6);
+                }
+
             }
+
+            // Una carta es real y otra no
+            else if (CheckIfCardIsReal(card1) && !CheckIfCardIsReal(card2) || !CheckIfCardIsReal(card1) && CheckIfCardIsReal(card2))
+            {
+                royalFlushResult = Math.Round(SingleRoyalCardFlush(), 6);
+            }
+
+            // Ninguna carta real.
+            else if (!CheckIfCardIsReal(card1) && !CheckIfCardIsReal(card2))
+            {
+                royalFlushResult = Math.Round(NoRoyalCardsFlush(), 6);
+            }
+
+            // distinto palo.
             else
             {
                 colorResult = Math.Round(NotSuitedCardsFlush(), 6);
+
+                // Cartas de diferente palo y ambas reales.
+                if (CheckIfCardIsReal(card1) && CheckIfCardIsReal(card2))
+                {
+                    royalFlushResult = Math.Round(NotSuitedRoyalCardsFlush(), 6);
+                }
             }
+
             return (colorResult, fullHouseResult, pokerResult, royalFlushResult);
         }
 
@@ -70,6 +120,58 @@ namespace Proyecto_Combinatoria
             pColor = dividendo / divisor;
 
             return pColor * 100;
+        }
+
+        // Método para calcular la probabilidad de escalera real con dos cartas reales.
+        public static double SuitedRoyalCardsFlush()
+        {
+            double pRoyalFlush = 0;
+
+            double dividendo = Combinaciones(5,3) * 46 * 45 + 3;
+            double divisor = Combinaciones(50, 5);
+
+            pRoyalFlush = dividendo / divisor;
+
+            return pRoyalFlush * 100;
+        }
+
+        // Ambas cartas reales, distinto palo.
+        public static double NotSuitedRoyalCardsFlush()
+        {
+            double pRoyalFlush = 0;
+
+            double dividendo = 2 * 46 + 2;
+            double divisor = Combinaciones(50, 5);
+
+            pRoyalFlush = dividendo / divisor;
+
+            return pRoyalFlush * 100;
+        }
+
+        // Una carta real y otra no.
+        public static double SingleRoyalCardFlush()
+        {
+            double pRoyalFlush = 0;
+
+            double dividendo = 46 + 3;
+            double divisor = Combinaciones(50, 5);
+
+            pRoyalFlush = dividendo / divisor;
+
+            return pRoyalFlush * 100;
+        }
+
+        // Ninguna carta real
+        public static double NoRoyalCardsFlush()
+        {
+            double pRoyalFlush = 0;
+
+            double dividendo = 4;
+            double divisor = Combinaciones(50, 5);
+
+            pRoyalFlush = dividendo / divisor;
+
+            return pRoyalFlush * 100;
         }
     }
 }
