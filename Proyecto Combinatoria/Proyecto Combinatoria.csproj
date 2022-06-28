@@ -50,6 +50,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -205,6 +206,7 @@
     <None Include="Resources\images\RedDeadOnline1280 x 720.jpg" />
     <None Include="Resources\images\red-dead-red-dead-redemption-2-poker-hd-wallpaper-preview.jpg" />
     <None Include="Resources\images\RDR2-FINAL.png" />
+    <None Include="Resources\images\RDRBlur_PanelResultado.png" />
     <Content Include="Resources\images\RedDeadOnline.jpg" />
   </ItemGroup>
   <ItemGroup />

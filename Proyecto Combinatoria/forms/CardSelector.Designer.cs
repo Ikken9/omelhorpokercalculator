@@ -171,6 +171,7 @@ namespace Proyecto_Combinatoria
             // panelResultados
             // 
             this.panelResultados.BackColor = System.Drawing.Color.Transparent;
+            this.panelResultados.BackgroundImage = global::Proyecto_Combinatoria.Properties.Resources.RDRBlur_PanelResultado;
             this.panelResultados.Controls.Add(this.resultadoEscaleraReal);
             this.panelResultados.Controls.Add(this.resultadoPoker);
             this.panelResultados.Controls.Add(this.resultadoFullHouse);
@@ -192,8 +193,8 @@ namespace Proyecto_Combinatoria
             // 
             this.resultadoEscaleraReal.AutoSize = true;
             this.resultadoEscaleraReal.Font = new System.Drawing.Font("Chinese Rocks Rg", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultadoEscaleraReal.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.resultadoEscaleraReal.Location = new System.Drawing.Point(184, 231);
+            this.resultadoEscaleraReal.ForeColor = System.Drawing.Color.Red;
+            this.resultadoEscaleraReal.Location = new System.Drawing.Point(170, 231);
             this.resultadoEscaleraReal.Name = "resultadoEscaleraReal";
             this.resultadoEscaleraReal.Size = new System.Drawing.Size(27, 25);
             this.resultadoEscaleraReal.TabIndex = 10;
@@ -203,8 +204,8 @@ namespace Proyecto_Combinatoria
             // 
             this.resultadoPoker.AutoSize = true;
             this.resultadoPoker.Font = new System.Drawing.Font("Chinese Rocks Rg", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultadoPoker.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.resultadoPoker.Location = new System.Drawing.Point(184, 179);
+            this.resultadoPoker.ForeColor = System.Drawing.Color.Red;
+            this.resultadoPoker.Location = new System.Drawing.Point(170, 179);
             this.resultadoPoker.Name = "resultadoPoker";
             this.resultadoPoker.Size = new System.Drawing.Size(27, 25);
             this.resultadoPoker.TabIndex = 9;
@@ -214,8 +215,8 @@ namespace Proyecto_Combinatoria
             // 
             this.resultadoFullHouse.AutoSize = true;
             this.resultadoFullHouse.Font = new System.Drawing.Font("Chinese Rocks Rg", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultadoFullHouse.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.resultadoFullHouse.Location = new System.Drawing.Point(184, 119);
+            this.resultadoFullHouse.ForeColor = System.Drawing.Color.Red;
+            this.resultadoFullHouse.Location = new System.Drawing.Point(170, 119);
             this.resultadoFullHouse.Name = "resultadoFullHouse";
             this.resultadoFullHouse.Size = new System.Drawing.Size(27, 25);
             this.resultadoFullHouse.TabIndex = 8;
@@ -225,8 +226,8 @@ namespace Proyecto_Combinatoria
             // 
             this.resultadoColor.AutoSize = true;
             this.resultadoColor.Font = new System.Drawing.Font("Chinese Rocks Rg", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultadoColor.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.resultadoColor.Location = new System.Drawing.Point(184, 71);
+            this.resultadoColor.ForeColor = System.Drawing.Color.Red;
+            this.resultadoColor.Location = new System.Drawing.Point(170, 71);
             this.resultadoColor.Name = "resultadoColor";
             this.resultadoColor.Size = new System.Drawing.Size(27, 25);
             this.resultadoColor.TabIndex = 7;
