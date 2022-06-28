@@ -67,18 +67,18 @@ namespace Proyecto_Combinatoria
                     royalFlushResult = Math.Round(SuitedRoyalCardsFlush(), 6);
                 }
 
-            }
+                // dos cartas mismo palo, una real.
+                else if (CheckIfCardIsReal(card1) && !CheckIfCardIsReal(card2) || !CheckIfCardIsReal(card1) && CheckIfCardIsReal(card2))
+                {
+                    royalFlushResult = Math.Round(SingleRoyalCardFlush(), 6);
+                }
 
-            // Una carta es real y otra no
-            else if (CheckIfCardIsReal(card1) && !CheckIfCardIsReal(card2) || !CheckIfCardIsReal(card1) && CheckIfCardIsReal(card2))
-            {
-                royalFlushResult = Math.Round(SingleRoyalCardFlush(), 6);
-            }
+                // dos cartas mismo palo, ninguna real.
+                else if (!CheckIfCardIsReal(card1) && !CheckIfCardIsReal(card2))
+                {
+                    royalFlushResult = Math.Round(NoRoyalCardsFlush(), 6);
+                }
 
-            // Ninguna carta real.
-            else if (!CheckIfCardIsReal(card1) && !CheckIfCardIsReal(card2))
-            {
-                royalFlushResult = Math.Round(NoRoyalCardsFlush(), 6);
             }
 
             // distinto palo.
@@ -90,6 +90,18 @@ namespace Proyecto_Combinatoria
                 if (CheckIfCardIsReal(card1) && CheckIfCardIsReal(card2))
                 {
                     royalFlushResult = Math.Round(NotSuitedRoyalCardsFlush(), 6);
+                }
+
+                // diferente palo, una carta es real y otra no
+                else if (CheckIfCardIsReal(card1) && !CheckIfCardIsReal(card2) || !CheckIfCardIsReal(card1) && CheckIfCardIsReal(card2))
+                {
+                    royalFlushResult = Math.Round(SingleRoyalCardFlush(), 6);
+                }
+
+                // diferente palo, ninguna carta real.
+                else if (!CheckIfCardIsReal(card1) && !CheckIfCardIsReal(card2))
+                {
+                    royalFlushResult = Math.Round(NoRoyalCardsFlush(), 6);
                 }
             }
 
