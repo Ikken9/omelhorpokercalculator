@@ -75,12 +75,33 @@ namespace Proyecto_Combinatoria
 
         private void tituloJugadas_Click(object sender, EventArgs e)
         {
-
+ 
         }
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (card1 == null || card2 == null)
+                {
+                    throw new ArgumentNullException("No se elijieron las 2 cartas."); 
+                }
+                // Devuelve una tupla con los 4 resultados de las 4 jugadas:
+                //      1 - Jugada Color
+                //      2 - Jugada Full House
+                //      3 - Jugada Poker
+                //      4 - Jugada Escalera Real
+                (double, double, double, double) result = Calcs.CalculateProbability(card1, card2);
+                resultadoColor.Text = $"{result.Item1}%";
+                resultadoFullHouse.Text = $"{result.Item2}%";
+                resultadoPoker.Text = $"{result.Item3}%";
+                resultadoEscaleraReal.Text = $"{result.Item4}%";
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Se deben elegir las dos cartas antes de calcular.", "Error");
+            }
+            
         }
 
 
@@ -199,6 +220,12 @@ namespace Proyecto_Combinatoria
             carta1.BackgroundImage = initialBackground;
             carta2.BackgroundImage = initialBackground;
             resetButton.Visible = false;
+
+            // Reseteamos el panel de resultados:
+            resultadoColor.Text = "...";
+            resultadoFullHouse.Text = "...";
+            resultadoPoker.Text = "...";
+            resultadoEscaleraReal.Text = "...";
         }
     }
 }

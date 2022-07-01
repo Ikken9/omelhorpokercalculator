@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -22,10 +23,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -47,9 +48,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>01BBFCDDDF304F2984905055BD57F7093CCEF865</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Proyecto Combinatoria_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -131,6 +145,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>SpadeCardsResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <AdditionalFiles Include="Fonts\chinese rocks free.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -200,10 +215,12 @@
     <Content Include="Resources\images\cards\trebol\king_of_clubs2.png" />
     <Content Include="Resources\images\cards\trebol\queen_of_clubs2.png" />
     <Content Include="Resources\images\fondo-mesa-poker-color-verde_47243-1094.jpg" />
+    <None Include="Proyecto Combinatoria_TemporaryKey.pfx" />
     <None Include="Resources\images\RedDeadOnline2.jpg" />
     <None Include="Resources\images\RedDeadOnline1280 x 720.jpg" />
     <None Include="Resources\images\red-dead-red-dead-redemption-2-poker-hd-wallpaper-preview.jpg" />
     <None Include="Resources\images\RDR2-FINAL.png" />
+    <None Include="Resources\images\RDRBlur_PanelResultado.png" />
     <Content Include="Resources\images\RedDeadOnline.jpg" />
   </ItemGroup>
   <ItemGroup />
