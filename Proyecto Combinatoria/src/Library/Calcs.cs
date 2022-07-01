@@ -139,7 +139,7 @@ namespace Proyecto_Combinatoria
         {
             double pRoyalFlush = 0;
 
-            double dividendo = Combinaciones(5,3) * 46 * 45 + 3;
+            double dividendo = Combinaciones(3,3) * 47 * 46 + 3;
             double divisor = Combinaciones(50, 5);
 
             pRoyalFlush = dividendo / divisor;
